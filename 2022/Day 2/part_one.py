@@ -1,4 +1,4 @@
-file = open("./input.text", "r")
+file = open("./input.txt", "r")
 answers = []
 
 first_column = {

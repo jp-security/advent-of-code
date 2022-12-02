@@ -1,6 +1,6 @@
 import { parseData } from "../../utils/parsers";
 
-const data = parseData(__dirname, 'input.text');
+const data = parseData(__dirname, 'input.txt');
 
 let partOneScore: number = 0
 let partTwoScore: number = 0

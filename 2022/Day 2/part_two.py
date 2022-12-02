@@ -1,6 +1,8 @@
-file = open("./input.text", "r")
+import time
+file = open("./input.txt", "r")
 answers = []
 
+tic = time.perf_counter()
 first_column = {
     'A': 'rock',
     'B': 'paper',
@@ -34,7 +36,6 @@ while True:
         # Win
         for winner, loser in win_conditions.items():
             if loser == opponent:
-                print(f'{winner} | {opponent}')
                 total_score = total_score + 6 + scores[winner]
     
     if you == 'Y':
@@ -43,10 +44,11 @@ while True:
     
     if you == 'X':
         # Lose
-        print(f"You: {win_conditions[opponent]} | Opponent: {opponent} | Score: {scores[win_conditions[opponent]]}")
         total_score = total_score + 0 + scores[win_conditions[opponent]]
 
+toc = time.perf_counter()
 print(total_score)
+print(f'Speed: {toc-tic:0.4f} seconds')
     
 
 

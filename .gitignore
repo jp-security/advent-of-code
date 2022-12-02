@@ -112,3 +112,6 @@ package-lock.json
 tsconfig.json
 *.js
 *.js.map
+
+# Advent of Code
+input.txt

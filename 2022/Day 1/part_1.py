@@ -1,6 +1,6 @@
 import pandas as pd
 
-file = open("./input.text", 'r')
+file = open("./input.txt", 'r')
 df_setup = []
 elf_count = 0
 count = 0
