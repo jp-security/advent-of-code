@@ -17,25 +17,16 @@ data.forEach(element => {
 
     if (testRange(+firstZone, +secondZone, +thirdZone) && testRange(+firstZone, +secondZone, +fourthZone)){
         partOneOverLapCounter += 1;
-    } else if (testRange(+firstZone, +secondZone, +fourthZone) && testRange(+firstZone, +secondZone, +thirdZone)) {
-        partOneOverLapCounter += 1;
     }else if (testRange(+thirdZone, +fourthZone, +firstZone) && testRange(+thirdZone, +fourthZone, +secondZone)){
-        partOneOverLapCounter += 1;
-    } else if (testRange(+thirdZone, +fourthZone, +secondZone) && testRange(+thirdZone, +fourthZone, +firstZone)){
         partOneOverLapCounter += 1;
     };
 
     if (testRange(+firstZone, +secondZone, +thirdZone) || testRange(+firstZone, +secondZone, +fourthZone)){
         partTwoOverLapCounter += 1;
-    } else if (testRange(+firstZone, +secondZone, +fourthZone) || testRange(+firstZone, +secondZone, +thirdZone)) {
-        partTwoOverLapCounter += 1;
-    }else if (testRange(+thirdZone, +fourthZone, +firstZone) || testRange(+thirdZone, +fourthZone, +secondZone)){
-        partTwoOverLapCounter += 1;
-    } else if (testRange(+thirdZone, +fourthZone, +secondZone) || testRange(+thirdZone, +fourthZone, +firstZone)){
+    } else if (testRange(+thirdZone, +fourthZone, +firstZone) || testRange(+thirdZone, +fourthZone, +secondZone)){
         partTwoOverLapCounter += 1;
     };
 });
-
 
 console.log(`Part One: ${partOneOverLapCounter}`);
 console.log(`Part Tne: ${partTwoOverLapCounter}`);
