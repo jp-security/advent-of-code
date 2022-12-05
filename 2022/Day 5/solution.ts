@@ -93,7 +93,3 @@ function partTwo(){
 
 partOne();
 partTwo();
-
-
-
-
