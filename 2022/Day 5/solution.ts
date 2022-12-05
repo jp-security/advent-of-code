@@ -48,6 +48,21 @@ function newCraneMoveToFrom(totalBoxes: number, startStack: string[], endStack: 
     };
 }
 
+function printAnswer(part: string, stack: string[][]){
+    console.log(
+        `-----Part ${part} Answer-----\n`,
+        `${stack[0].pop()}`,
+        `${stack[1].pop()}`,
+        `${stack[2].pop()}`,
+        `${stack[3].pop()}`,
+        `${stack[4].pop()}`,
+        `${stack[5].pop()}`,
+        `${stack[6].pop()}`,
+        `${stack[7].pop()}`,
+        `${stack[8].pop()}`,
+    )
+}
+
 function partOne(){
     let moveableStack = createInitialStacks(initialStack);
 
@@ -59,19 +74,7 @@ function partOne(){
             moveableStack[+orderSplit[5] - 1]
         );
     };
-
-    console.log(
-        '-----Part One Answer-----\n',
-        `${moveableStack[0].pop()}`,
-        `${moveableStack[1].pop()}`,
-        `${moveableStack[2].pop()}`,
-        `${moveableStack[3].pop()}`,
-        `${moveableStack[4].pop()}`,
-        `${moveableStack[5].pop()}`,
-        `${moveableStack[6].pop()}`,
-        `${moveableStack[7].pop()}`,
-        `${moveableStack[8].pop()}`,
-    )
+    printAnswer('One', moveableStack);
 };
 
 function partTwo(){
@@ -85,19 +88,7 @@ function partTwo(){
             newMoveableStack[+orderSplit[5] - 1]
         );
     };
-
-    console.log(
-        '-----Part Two Answer-----\n',
-        `${newMoveableStack[0].pop()}`,
-        `${newMoveableStack[1].pop()}`,
-        `${newMoveableStack[2].pop()}`,
-        `${newMoveableStack[3].pop()}`,
-        `${newMoveableStack[4].pop()}`,
-        `${newMoveableStack[5].pop()}`,
-        `${newMoveableStack[6].pop()}`,
-        `${newMoveableStack[7].pop()}`,
-        `${newMoveableStack[8].pop()}`,
-    );
+    printAnswer('Two', newMoveableStack);
 };
 
 partOne();
